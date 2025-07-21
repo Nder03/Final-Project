@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import AdminPage from '../index';
+import AdminPage from '../pages/admin/index';
 import { useAuth } from '@/AuthContext';
 
 jest.mock('@/AuthContext', () => ({
