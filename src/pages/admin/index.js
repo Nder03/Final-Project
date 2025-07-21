@@ -10,6 +10,7 @@ export default function MovieList() {
   const [allMovies, setAllMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+
   const [selectedMovies, setSelectedMovies] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [collections, setCollections] = useState([]);
@@ -45,7 +46,7 @@ export default function MovieList() {
   const handleSelectMovie = (movieId) => {
     setSelectedMovies(prevSelected =>
       prevSelected.includes(movieId)
-        ? prevSelected.filter(id => id !== movieId)
+        ? prevSelected.filter(id => id !== movieId) 
         : [...prevSelected, movieId]
     );
   };
